@@ -20,3 +20,11 @@ In the shop you can buy:
 The aim of the game is to defeat as many Blinds as possible. 
 
 The actual game is really fun and I felt like it would be a nice and interesting challenge to try and recreate it in my project.
+
+
+## User Stories
+- I want to be able to view my current Jokers
+- I want to be able to add cards to my deck (using tarot cards)
+- I want to view my highest score at the end of the game
+- I want to be able to upgrade poker hands (using planet cards)
+- I want to be able to increase hand size/increase discard size (using vouchers)
