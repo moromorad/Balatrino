@@ -14,13 +14,6 @@ public class Card {
         return 0;
     }
 
-
-    // EFFECTS : returns the mult this card provides
-    public int getMult() {
-        return 0;
-    }
-
-
     public String getRank() {
         return "";
     }
