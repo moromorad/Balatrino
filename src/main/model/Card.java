@@ -1,10 +1,10 @@
 package model;
 
 public class Card {
-
+    // REQUIRES: rank to be a number 1-10 or K Q J A and suit to be one of S H C D
     // MODIFIES : this
     // EFFECTS : constructs a card with a rank and suit
-    public Card() {
+    public Card(String rank, String suit) {
 
     }
 
