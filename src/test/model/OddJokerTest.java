@@ -22,9 +22,9 @@ public class OddJokerTest {
     @Test
     void testAbility() {
         jk.Ability(cnm, cards);
-        assertEquals((Integer) 18,cnm.get(1));
+        assertEquals((Integer) 14,cnm.get(1));
         jk.Ability(cnm, cards);
-        assertEquals((Integer) 26,cnm.get(1));
+        assertEquals((Integer) 22,cnm.get(1));
     }
 
     @Test
