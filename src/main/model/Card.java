@@ -1,11 +1,12 @@
 package model;
 
 public class Card {
-    // REQUIRES: rank to be a number 1-10 or K Q J A and suit to be one of S H C D
+    // REQUIRES: rank to be a number 2-10 or K Q J A and suit to be one of S H C D
     // MODIFIES : this
     // EFFECTS : constructs a card with a rank and suit
     private String rank;
     private String suit;
+
     public Card(String rank, String suit) {
         this.rank = rank;
         this.suit = suit;
@@ -38,7 +39,7 @@ public class Card {
 
     // EFFECTS : returns the name of the card (rank and suit)
     public String getCard() {
-        return (getRank()+getSuit());
+        return (getRank() + getSuit());
     }
 
 
