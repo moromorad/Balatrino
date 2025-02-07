@@ -29,7 +29,7 @@ public class CardTest {
         assertEquals(10,card3.getChips());
         assertEquals(11,card4.getChips());
         assertEquals(8,card5.getChips());
-        assertEquals(10,card5.getChips());
+        assertEquals(10,card6.getChips());
         
     }
 
