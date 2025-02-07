@@ -4,27 +4,41 @@ public class Card {
     // REQUIRES: rank to be a number 1-10 or K Q J A and suit to be one of S H C D
     // MODIFIES : this
     // EFFECTS : constructs a card with a rank and suit
+    private String rank;
+    private String suit;
     public Card(String rank, String suit) {
+        this.rank = rank;
+        this.suit = suit;
 
     }
 
 
     // EFFECTS : returns the chips this card provides
     public int getChips() {
-        return 0;
+        if (getRank().matches("\\d+")) {
+            return Integer.parseInt(getRank());
+
+        } else {
+            if (getRank().equals("A")) {
+                return 11;
+            } else {
+                return 10;
+            }
+        }
+        
     }
 
     public String getRank() {
-        return "";
+        return rank;
     }
 
     public String getSuit() {
-        return "";
+        return suit;
     }
 
     // EFFECTS : returns the name of the card (rank and suit)
     public String getCard() {
-        return "";
+        return (getRank()+getSuit());
     }
 
 
