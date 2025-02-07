@@ -1,5 +1,7 @@
 package model;
 
+// Represents a card in a standard deck of 52 cards with a rank, suit, and number of chips it provides
+
 public class Card {
     // REQUIRES: rank to be a number 2-10 or K Q J A and suit to be one of S H C D
     // MODIFIES : this
