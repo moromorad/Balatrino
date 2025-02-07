@@ -1,36 +1,76 @@
 package model;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class Deck {
+    List<Card> deck;
+    List<String> ranks = Arrays.asList("A", "K", "Q", "J", "10", "9", "8", "7", "6", "5", "4", "3", "2");
+    List<String> suits = Arrays.asList("S","H","C","D");
 
     // MODIFIES : this
     // EFFECTS : constructs a standard deck of 52 cards (list of Card)
     public Deck() {
-
+        this.deck = new ArrayList<Card>();
+        for (String suit : suits) {
+            for (String rank : ranks) {
+                deck.add(new Card(rank, suit));
+            }
+        }
     }
     //EFFECTS : returns the deck
     public List<String> getDeck() {
-        return new ArrayList<String>();
+        List<String> cardNames = new ArrayList<String>();
+        for (Card card : deck) {
+            cardNames.add(card.getRank() + card.getSuit());
+        }
+        return cardNames;
     }
     
     //MODIFIES : this
     // EFFECTS : adds the card to the deck
-    public void addToDeck(String card) {
+    public void addToDeck(String rank, String suit) {
+        deck.add(new Card(rank, suit));
 
     }
 
     //MODIFIES : this
     // EFFECTS : removes the card from the deck
-    public void removeFromDeck(String card) {
+    public void removeFromDeck(String rank, String suit) {
+        for (Card card : deck) {
+            if (card.getCard().equals(rank + suit)) {
+                deck.remove(card);
+                break;
+            }
+            
+        }
 
     }
+    // REQUIRES : str is a rank or suit (e.g. K for king D for diamonds)
     // EFFECTS : counts the number of the suit or rank in the deck
     public int numberInDeck(String str) {
-        return 0;
+        int count = 0;
+        if (str.equals("S")|str.equals("H")|str.equals("C")|str.equals("D")) {
+            for (Card card : deck) {
+                if (card.getSuit().equals(str)) {
+                    count = count + 1;
+                }
+            }
+        } else {
+            for (Card card : deck) {
+                if (card.getRank().equals(str)) {
+                    count = count + 1;
+                }
+            }
+        }
+        return count;
     }
 
+    public int getSize() {
+        return deck.size();
+    }
 
 
 }
