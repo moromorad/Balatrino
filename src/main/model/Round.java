@@ -58,6 +58,32 @@ public class Round {
     }
 
     public Integer getScore() {
-        return 0;
+        return 0 ;
     }
+
+    // REQUIRES : hand is 5 elements
+    // EFFECTS : checks if hand is a pair
+    private boolean checkPair(List<Card> hand) {
+        return false;
+    }
+
+    // REQUIRES : hand is 5 elements
+    // EFFECTS : checks if hand is a pair
+    private boolean checkThreeOfAKind(List<Card> hand) {
+        return false;
+    }
+
+    // REQUIRES : hand is 5 elements
+    // EFFECTS : checks if hand is a pair
+    private boolean checkStraight(List<Card> hand) {
+        return false;
+    }
+
+    // REQUIRES : hand is 5 elements
+    // EFFECTS : checks if hand is a pair
+    private boolean checkFlush(List<Card> hand) {
+        return false;
+    }
+
+
 }
