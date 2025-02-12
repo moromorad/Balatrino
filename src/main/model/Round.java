@@ -49,4 +49,15 @@ public class Round {
 
     }
 
+    public List<Card> getCurrentHand() {
+        return null;
+    }
+
+    public List<Card> getPlayedHand() {
+        return null;
+    }
+
+    public Integer getScore() {
+        return 0;
+    }
 }
