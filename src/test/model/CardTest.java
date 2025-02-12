@@ -40,6 +40,11 @@ public class CardTest {
         assertEquals("JS",card3.getCard());
     }
 
-
+    @Test
+    void testgetFullName() {
+        assertEquals("King of Diamonds",card1.getFullName());
+        assertEquals("10 of Diamonds",card6.getFullName());
+        assertEquals("Jack of Spades",card3.getFullName());
+    }
 
 }

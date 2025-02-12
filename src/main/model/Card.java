@@ -44,6 +44,33 @@ public class Card {
         return (getRank() + getSuit());
     }
 
+    public String getFullName() {
+        String fullRank = "";
+        String fullSuit = "";
+        if (rank.equals("K")) {
+            fullRank = "King";
+        } else if (rank.equals("Q")) {
+            fullRank = "Queen";
+        } else if (rank.equals("J")) {
+            fullRank = "Jack";
+        } else if (rank.equals("A")) {
+            fullRank = "Ace";
+        } else {
+            fullRank = rank;
+        }
+        
+        if (suit.equals("D")) {
+            fullSuit = "Diamonds";
+        } else if (suit.equals("S")) {
+            fullSuit = "Spades";
+        } else if (suit.equals("H")) {
+            fullSuit = "Hearts";
+        } else if (suit.equals("C")) {
+            fullSuit = "Clubs";
+        }
+
+        return (fullRank + " of " + fullSuit);
+    }
 
 
 }
