@@ -6,5 +6,6 @@ import java.util.List;
 public interface Joker {
     public void Ability(List<Integer> chipsAndMult, List<Card> playedHand);
     public String getDesc();
+    public String getName();
 
 }

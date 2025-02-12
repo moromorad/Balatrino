@@ -5,8 +5,10 @@ import java.util.List;
 
 public class JokerJoker implements Joker {
     String desc;
+    String name;
     public JokerJoker() {
         desc = "+4 Mult";
+        name = "Joker";
     }
     @Override
     // EFFECTS : adds +4 to the given mult 
@@ -17,6 +19,10 @@ public class JokerJoker implements Joker {
     @Override
     public String getDesc() {
         return desc;
+    }
+
+    public String getName() {
+        return name;
     }
 
 }
