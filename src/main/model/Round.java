@@ -32,4 +32,21 @@ public class Round {
     public boolean isWon() {
         return false;
     }
+
+    // EFFECTS : takes a poker hand and returns the according score and mult
+    public List<Integer> getChipsAndMultFromPokerHand(String pokerHand) {
+        return new ArrayList<>();
+    }
+
+    // EFFECTS : takes chips and mult and applies jokers to them
+    public List<Integer> applyJokers(List<Integer> chipsAndMult) {
+        return new ArrayList<>();
+    }
+
+    // MODIFIES : this
+    // EFFECTS : applies the given chips and mult to the score
+    public void applyScore(List<Integer> chipsAndMult) {
+
+    }
+
 }
