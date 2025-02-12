@@ -12,6 +12,7 @@ public class JokerJoker implements Joker {
     }
     @Override
     // EFFECTS : adds +4 to the given mult 
+    // MODIFIES chipsAndMult
     public void Ability(List<Integer> chipsAndMult, List<Card> playedHand) {
         chipsAndMult.set(1,chipsAndMult.get(1)+4);
     }

@@ -11,6 +11,7 @@ public class OddJoker implements Joker {
     }
 
     // EFFECT: each odd ranked card in the hand adds +31 Chips (A,3,5,7,9)
+    // MODIFIES chipsAndMult
     @Override
     public void Ability(List<Integer> chipsAndMult, List<Card> playedHand) {
         int chips = 0;
