@@ -88,4 +88,16 @@ public class RoundTest {
         assertEquals((Integer) 92,cnm.get(0));
         assertEquals((Integer) (18 + 4 + 4),cnm.get(1));
     }
+
+    @Test
+    void applyScoreTest() {
+        List<Integer> cnm = new ArrayList<>();
+        cnm.add(30);
+        cnm.add(2);
+        round.applyScore(cnm);
+        assertEquals((Integer) 540,round.getScoreLeft());
+        cnm = Arrays.asList(50,5);
+        round.applyScore(cnm);
+        assertEquals((Integer) 290, round.getScoreLeft());
+    }
 }

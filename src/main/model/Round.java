@@ -6,13 +6,13 @@ import java.util.*;
 public class Round {
     private Deck deck;
     private List<Joker> jokers;
-    private int score;
+    private int scoreLeft;
     private List<Card> currentHand;
     // Represents a round of the game, it takes the deck and the jokers the player has and the score that needs to be gotten, and plays the round.
     public Round(Deck deck, List<Joker> jokers, int score) {
         this.deck = deck;
         this.jokers = jokers;
-        this.score = score;
+        this.scoreLeft = score;
         currentHand = new ArrayList<Card>();
     }
 
@@ -76,6 +76,9 @@ public class Round {
 
     // EFFECTS : returns if the round has been won or not
     public boolean isWon() {
+        if (scoreLeft <= 0) {
+            return true;
+        } 
         return false;
     }
 
@@ -107,7 +110,7 @@ public class Round {
         return chipsNMult;
     }
 
-    // REQUIRES : chinsAndMult has 2 elements, both positive and second one is larger than 0 and hand is 5 elements
+    // REQUIRES : chipsAndMult has 2 elements, both positive and second one is larger than 0 and hand is 5 elements
     // EFFECTS : takes chips and mult and applies jokers to them 
     public void applyJokers(List<Integer> chipsAndMult, List<Card> hand) {
         for (Joker joker : jokers) {
@@ -115,22 +118,20 @@ public class Round {
         }
     }
 
+    // REQUIRES : chipsAndMult has 2 elements, both positive and second one is larger than 0 and hand is 5 elements
     // MODIFIES : this
     // EFFECTS : applies the given chips and mult to the score
     public void applyScore(List<Integer> chipsAndMult) {
-
+        scoreLeft = scoreLeft - (chipsAndMult.get(0) * chipsAndMult.get(1));
     }
 
     public List<Card> getCurrentHand() {
         return currentHand;
     }
 
-    public List<Card> getPlayedHand() {
-        return null;
-    }
 
-    public Integer getScore() {
-        return score ;
+    public Integer getScoreLeft() {
+        return scoreLeft ;
     }
 
 
