@@ -1,11 +1,19 @@
 package model;
+import static org.junit.Assert.assertEquals;
+
 import java.util.*;
 
 public class Round {
-
+    private Deck deck;
+    private List<Joker> jokers;
+    private int score;
+    private List<Card> currentHand;
     // Represents a round of the game, it takes the deck and the jokers the player has and the score that needs to be gotten, and plays the round.
-    public Round(Deck deck, List<Joker> jokers) {
-
+    public Round(Deck deck, List<Joker> jokers, int score) {
+        this.deck = deck;
+        this.jokers = jokers;
+        this.score = score;
+        currentHand = new ArrayList<Card>();
     }
 
     // REQUIRES : hand is only 5 cards
@@ -29,15 +37,41 @@ public class Round {
     // REQUIRES : amount is either 5 or 8
     // MODIFIES : this
     // EFFECTS : pulls, amount of cards from the deck and adds them to the current hand
-    public void pullCards(int amount) {
-
+    public void pullFromDeck(int amount) {
+        List<Card> randomList = new ArrayList<>();
+        Random random = new Random();
+        int nextIndex;
+        for (int i = 0; i < amount; i++) {
+            nextIndex = random.nextInt(deck.getCards().size());        
+            randomList.add(deck.getCards().get(nextIndex));
+            deck.getCards().remove(deck.getCards().get(nextIndex));
+        }
+        currentHand.addAll(randomList);
     }
 
     // REQUIRES : cardString to be a string of 5 numbers in the range of 1 to 8 inclusive, with no repeat numbers, seprated by commas only
     // MODIFIES : this
-    // EFFECTS : pulls cards based on the 5 numbers given from the current hand, returns the this of those pulled cards
+    // EFFECTS : pulls cards based on the 5 numbers given from the current hand, returns the list of those pulled cards and removes them from the current hand
     public List<Card> pullFromHand(String cardString) {
-        return new ArrayList<Card>();
+        List<Card> pulledCards = new ArrayList<>();
+        List<Integer> indexes = new ArrayList<>();
+        
+        for (String num : cardString.split(",")) {
+            int index = Integer.parseInt(num.trim()) - 1; 
+            indexes.add(index);
+        }
+
+        for (Integer num : indexes) {
+            pulledCards.add(currentHand.get(num));
+        }
+
+        for (Card card : pulledCards) {
+            currentHand.remove(card);
+        }
+
+        assertEquals(3,currentHand.size());
+        assertEquals(5,pulledCards.size());
+        return pulledCards;
     }
 
     // EFFECTS : returns if the round has been won or not
@@ -62,7 +96,7 @@ public class Round {
     }
 
     public List<Card> getCurrentHand() {
-        return null;
+        return currentHand;
     }
 
     public List<Card> getPlayedHand() {
@@ -70,8 +104,16 @@ public class Round {
     }
 
     public Integer getScore() {
-        return 0 ;
+        return score ;
     }
+
+
+    public Deck getDeck() {
+        return deck;
+    }
+
+
+    // Helpers
 
     // REQUIRES : hand is 5 elements
     // EFFECTS : checks if hand is a pair
@@ -159,6 +201,7 @@ public class Round {
         }
         return true;
     }
+
 
 
 }
