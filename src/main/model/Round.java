@@ -11,7 +11,19 @@ public class Round {
     // REQUIRES : hand is only 5 cards
     // EFFECTS : returns the poker hand that is played in the hand
     public String getHandPlayed(List<Card> hand) {
-        return "";
+        if (checkFlush(hand) & checkStraight(hand)) {
+            return "Straight Flush";
+        } else if (checkFlush(hand)) {
+            return "Flush";
+        } else if (checkStraight(hand)) {
+            return "Straight";
+        } else if (checkThreeOfAKind(hand)) {
+            return "Three of a Kind";
+        } else if (checkPair(hand)) {
+            return "Pair";
+        } else {
+            return "High Card";
+        }
     }
 
     // REQUIRES : amount is either 5 or 8
@@ -64,25 +76,88 @@ public class Round {
     // REQUIRES : hand is 5 elements
     // EFFECTS : checks if hand is a pair
     private boolean checkPair(List<Card> hand) {
+        int count;
+        for (int i = 0; i < hand.size(); i++) {
+            count = 1;
+            for (int j = 0; j < hand.size(); j++) {
+                if (i != j && hand.get(i).getRank().equals(hand.get(j).getRank())) {
+                    count++;
+                }
+            }
+            if (count == 2) {
+                return true;
+            }
+        }
         return false;
     }
+    
 
     // REQUIRES : hand is 5 elements
-    // EFFECTS : checks if hand is a pair
+    // EFFECTS : checks if hand is a three of a kind
     private boolean checkThreeOfAKind(List<Card> hand) {
+        int count;
+        for (int i = 0; i < hand.size(); i++) {
+            count = 1;
+            for (int j = 0; j < hand.size(); j++) {
+                if (i != j && hand.get(i).getRank().equals(hand.get(j).getRank())) {
+                    count++;
+                }
+            }
+            if (count == 3) {
+                return true;
+            }
+        }
         return false;
     }
 
     // REQUIRES : hand is 5 elements
-    // EFFECTS : checks if hand is a pair
+    // EFFECTS : (helper for checkStraight) takes a hand and returns a list of each ranks index
+    private List<Integer> getStraightIndex(List<Card> hand) {
+        List<Integer> indexList = new ArrayList<>();
+        for (Card card : hand) {
+            if (card.getRank().equals("A")) {
+                indexList.add(14);
+            } else if (card.getRank().equals("K")) {
+                indexList.add(13);
+            } else if (card.getRank().equals("Q")) {
+                indexList.add(12);
+            } else if (card.getRank().equals("J")) {
+                indexList.add(11);
+            } else {
+                indexList.add(Integer.parseInt(card.getRank()));
+            }
+            
+        }
+        return indexList;
+    }
+    // REQUIRES : hand is 5 elements
+    // EFFECTS : checks if hand is a straight
     private boolean checkStraight(List<Card> hand) {
-        return false;
+        List<Integer> sortedIndexList = getStraightIndex(hand);
+        Collections.sort(sortedIndexList);
+        for (int i = 0 ; i < (sortedIndexList.size() - 1) ; i++ ) {
+            if (!((sortedIndexList.get(i+1) - sortedIndexList.get(i)) == 1)) {
+                return false;
+            }
+        }
+        return true;
     }
 
     // REQUIRES : hand is 5 elements
-    // EFFECTS : checks if hand is a pair
+    // EFFECTS : checks if hand is a flush
     private boolean checkFlush(List<Card> hand) {
-        return false;
+        List<String> suits = new ArrayList<>();
+        for (Card card : hand) {
+            suits.add(card.getSuit());
+        }
+
+        String firstSuit = suits.get(0);
+        for (String suit : suits) {
+            if (!suit.equals(firstSuit)) {
+                return false;
+            }
+        }
+        return true;
     }
 
 
