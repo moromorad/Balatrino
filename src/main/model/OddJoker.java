@@ -20,6 +20,8 @@ public class OddJoker implements Joker {
                 if (!(Integer.parseInt(card.getRank()) % 2 == 0)) {
                     chips = chips + 31;
                 }
+            } else if (card.getRank().equals("A")) {
+                chips = chips + 31;
             }
         }
         chipsAndMult.set(0, chipsAndMult.get(0) + chips);

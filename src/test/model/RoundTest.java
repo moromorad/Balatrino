@@ -25,7 +25,7 @@ public class RoundTest {
 
     @BeforeEach
     void runBefore() {
-        odd = new JokerJoker();
+        odd = new OddJoker();
         even = new EvenJoker();
         joker = new JokerJoker();
         deck = new Deck();

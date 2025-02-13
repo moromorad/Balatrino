@@ -109,13 +109,15 @@ public class Round {
 
     // REQUIRES : chinsAndMult has 2 elements, both positive and second one is larger than 0 and hand is 5 elements
     // EFFECTS : takes chips and mult and applies jokers to them 
-    public List<Integer> applyJokers(List<Integer> chipsAndMult, List<Card> hand) {
-        return new ArrayList<>();
+    public void applyJokers(List<Integer> chipsAndMult, List<Card> hand) {
+        for (Joker joker : jokers) {
+            joker.Ability(chipsAndMult, hand);
+        }
     }
 
     // MODIFIES : this
     // EFFECTS : applies the given chips and mult to the score
-    public void applyScore(List<Integer> chipsAndMult, ) {
+    public void applyScore(List<Integer> chipsAndMult) {
 
     }
 
