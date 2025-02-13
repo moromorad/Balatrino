@@ -79,19 +79,43 @@ public class Round {
         return false;
     }
 
+    // REQUIRES : pokerHand is an actual poker hand from (Straight Flush, Flush, Straight, Three of a Kind, Pair, and High Card)
     // EFFECTS : takes a poker hand and returns the according score and mult
     public List<Integer> getChipsAndMultFromPokerHand(String pokerHand) {
-        return new ArrayList<>();
+        List<Integer> chipsNMult = new ArrayList<>();
+        if (pokerHand.equals("Straight Flush")) {
+            chipsNMult.add(100);
+            chipsNMult.add(8);
+
+        } else if (pokerHand.equals("Flush")) {
+            chipsNMult.add(35);
+            chipsNMult.add(4);
+            
+        } else if (pokerHand.equals("Straight")) {
+            chipsNMult.add(30);
+            chipsNMult.add(4);
+        } else if (pokerHand.equals("Three of a Kind")) {
+            chipsNMult.add(30);
+            chipsNMult.add(3);
+        } else if (pokerHand.equals("Pair")) {
+            chipsNMult.add(10);
+            chipsNMult.add(2);
+        } else if (pokerHand.equals("High Card")) {
+            chipsNMult.add(5);
+            chipsNMult.add(1);
+        }
+        return chipsNMult;
     }
 
-    // EFFECTS : takes chips and mult and applies jokers to them
-    public List<Integer> applyJokers(List<Integer> chipsAndMult) {
+    // REQUIRES : chinsAndMult has 2 elements, both positive and second one is larger than 0 and hand is 5 elements
+    // EFFECTS : takes chips and mult and applies jokers to them 
+    public List<Integer> applyJokers(List<Integer> chipsAndMult, List<Card> hand) {
         return new ArrayList<>();
     }
 
     // MODIFIES : this
     // EFFECTS : applies the given chips and mult to the score
-    public void applyScore(List<Integer> chipsAndMult) {
+    public void applyScore(List<Integer> chipsAndMult, ) {
 
     }
 

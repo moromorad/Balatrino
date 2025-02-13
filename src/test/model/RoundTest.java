@@ -65,4 +65,27 @@ public class RoundTest {
     }
 
 
+    @Test
+    void getChipsAndMultFromPokerHandTest() {
+        assertEquals((Integer) 100,round.getChipsAndMultFromPokerHand("Straight Flush").get(0));
+        assertEquals((Integer) 8,round.getChipsAndMultFromPokerHand("Straight Flush").get(1));
+        assertEquals(2,round.getChipsAndMultFromPokerHand("Straight Flush").size());
+
+        assertEquals((Integer) 5,round.getChipsAndMultFromPokerHand("High Card").get(0));
+        assertEquals((Integer) 1,round.getChipsAndMultFromPokerHand("High Card").get(1));
+    }
+
+
+    @Test
+    void applyJokersTest() {
+        List<Integer> cnm = new ArrayList<>();
+        cnm.add(30);
+        cnm.add(2);
+        round.applyJokers(cnm,highHand);
+        assertEquals((Integer) 30,cnm.get(0));
+        assertEquals((Integer) (2 + 4 + 12),cnm.get(1));
+        round.applyJokers(cnm, pairHand);
+        assertEquals((Integer) 92,cnm.get(0));
+        assertEquals((Integer) (18 + 4 + 4),cnm.get(1));
+    }
 }
