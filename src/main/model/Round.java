@@ -111,6 +111,7 @@ public class Round {
     }
 
     // REQUIRES : chipsAndMult has 2 elements, both positive and second one is larger than 0 and hand is 5 elements
+    //MODIFIES : chipsAndMult
     // EFFECTS : takes chips and mult and applies jokers to them 
     public void applyJokers(List<Integer> chipsAndMult, List<Card> hand) {
         for (Joker joker : jokers) {
@@ -123,6 +124,19 @@ public class Round {
     // EFFECTS : applies the given chips and mult to the score
     public void applyScore(List<Integer> chipsAndMult) {
         scoreLeft = scoreLeft - (chipsAndMult.get(0) * chipsAndMult.get(1));
+    }
+
+
+    // REQUIRES : chipsAndMult has 2 elements, both positive and second one is larger than 0 and hand is 5 elements, hand is 5 elements
+    // MODIFIES : cnm
+    //EFFECTS : adds chips from hand to cnm
+    public void getHandScore(List<Card> hand, List<Integer> cnm) {
+        int total = 0;
+        for (Card card : hand) {
+            total = total + card.getChips();
+        }
+        int chips = cnm.get(0);
+        cnm.set(0,chips + total);
     }
 
     public List<Card> getCurrentHand() {
