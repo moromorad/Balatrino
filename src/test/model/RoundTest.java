@@ -100,4 +100,16 @@ public class RoundTest {
         round.applyScore(cnm);
         assertEquals((Integer) 290, round.getScoreLeft());
     }
+
+    @Test
+    void getHandScore() {
+        List<Integer> cnm = new ArrayList<>();
+        cnm.add(30);
+        cnm.add(2);
+        round.getHandScore(highHand,cnm);
+        assertEquals((Integer) 66,cnm.get(0));
+        round.getHandScore(threeHand, cnm);
+        assertEquals((Integer) 119,cnm.get(0));
+
+    }
 }
