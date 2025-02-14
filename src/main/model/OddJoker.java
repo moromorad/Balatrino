@@ -2,10 +2,11 @@ package model;
 
 import java.util.List;
 
+// Represents a joker that adds score on odd cards
 public class OddJoker implements Joker {
     String desc;
     String name;
-    
+
     public OddJoker() {
         
         desc = "Played cards with odd rank each give +31 Chips";

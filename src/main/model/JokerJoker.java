@@ -3,6 +3,7 @@ package model;
 
 import java.util.List;
 
+// Represents a joker that adds mult to any hand
 public class JokerJoker implements Joker {
     String desc;
     String name;

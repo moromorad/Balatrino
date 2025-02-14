@@ -2,6 +2,7 @@ package model;
 
 import java.util.List;
 
+// Represents a joker that adds score on even cards
 public class EvenJoker implements Joker {
     String desc;
     String name;
