@@ -14,6 +14,8 @@ public class Game {
     int base;
     float factor;
 
+    // MODIFIES : this
+    // EFFECTS : initialises fiels for the game
     public Game() {
         deck = new Deck();
         jokers = new ArrayList<Joker>();
@@ -23,6 +25,8 @@ public class Game {
         factor = 1;
     }
 
+    // MODIFIES : this
+    // EFFECTS : plays the game
     public void playBalatrino() {
         while (playRound()) {
             System.out.print("\033[H\033[2J");
@@ -44,6 +48,7 @@ public class Game {
         System.out.println("Rounds Won : " + roundsWon);
     }
 
+    // EFFECTS : plays a round/blind
     public boolean playRound() {
         Scanner scanner = new Scanner(System.in);
         List<String> jokerNames = new ArrayList<String>();
@@ -117,7 +122,9 @@ public class Game {
         jokers.add(joker);
     }
 
-    public void upgradeRemove() {
+    // MODIFIES : this
+    // EFFECTS : prompts the user to remove a card from the deck
+    private void upgradeRemove() {
         try (Scanner scanner = new Scanner(System.in)) {
             System.out.println("Remove a card from the deck!");
             System.out.println("Enter the card you want to remove as 2 characters (e.g. king of diamonds is KD)");
