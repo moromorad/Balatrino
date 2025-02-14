@@ -1,4 +1,5 @@
 package model;
+
 import static org.junit.Assert.assertEquals;
 
 import java.util.*;
@@ -8,7 +9,8 @@ public class Round {
     private List<Joker> jokers;
     private int scoreLeft;
     private List<Card> currentHand;
-    // Represents a round of the game, it takes the deck and the jokers the player has and the score that needs to be gotten, and plays the round.
+    // Represents a round of the game, it takes the deck, jokers, the score, and plays the round.
+
     public Round(Deck deck, List<Joker> jokers, int score) {
         this.deck = deck;
         this.jokers = jokers;
@@ -49,9 +51,9 @@ public class Round {
         currentHand.addAll(randomList);
     }
 
-    // REQUIRES : cardString to be a string of 5 numbers in the range of 1 to 8 inclusive, with no repeat numbers, seprated by commas only
+    // REQUIRES:cardString to be a string of 5 numbers in the range of 1-8 inclusive, no repeats,seprated by commas only
     // MODIFIES : this
-    // EFFECTS : pulls cards based on the 5 numbers given from the current hand, returns the list of those pulled cards and removes them from the current hand
+    // EFFECTS : pulls the 5 cards from the current hand, returns the list of those cards and removes them 
     public List<Card> pullFromHand(String cardString) {
         List<Card> pulledCards = new ArrayList<>();
         List<Integer> indexes = new ArrayList<>();
@@ -82,7 +84,8 @@ public class Round {
         return false;
     }
 
-    // REQUIRES : pokerHand is an actual poker hand from (Straight Flush, Flush, Straight, Three of a Kind, Pair, and High Card)
+    // REQUIRES : pokerHand is an actual poker hand from:
+    //     (Straight Flush, Flush, Straight, Three of a Kind, Pair, and High Card)
     // EFFECTS : takes a poker hand and returns the according score and mult
     public List<Integer> getChipsAndMultFromPokerHand(String pokerHand) {
         List<Integer> chipsNMult = new ArrayList<>();
@@ -115,7 +118,7 @@ public class Round {
     // EFFECTS : takes chips and mult and applies jokers to them 
     public void applyJokers(List<Integer> chipsAndMult, List<Card> hand) {
         for (Joker joker : jokers) {
-            joker.Ability(chipsAndMult, hand);
+            joker.ability(chipsAndMult, hand);
         }
     }
 
@@ -127,7 +130,7 @@ public class Round {
     }
 
 
-    // REQUIRES : chipsAndMult has 2 elements, both positive and second one is larger than 0 and hand is 5 elements, hand is 5 elements
+    // REQUIRES : chipsAndMult has 2 elements, both positive and hand is 5 elements
     // MODIFIES : cnm
     //EFFECTS : adds chips from hand to cnm
     public void getHandScore(List<Card> hand, List<Integer> cnm) {
@@ -145,7 +148,7 @@ public class Round {
 
 
     public Integer getScoreLeft() {
-        return scoreLeft ;
+        return scoreLeft;
     }
 
 
@@ -213,13 +216,15 @@ public class Round {
         }
         return indexList;
     }
+
     // REQUIRES : hand is 5 elements
     // EFFECTS : checks if hand is a straight
+
     private boolean checkStraight(List<Card> hand) {
         List<Integer> sortedIndexList = getStraightIndex(hand);
         Collections.sort(sortedIndexList);
-        for (int i = 0 ; i < (sortedIndexList.size() - 1) ; i++ ) {
-            if (!((sortedIndexList.get(i+1) - sortedIndexList.get(i)) == 1)) {
+        for (int i = 0; i < (sortedIndexList.size() - 1); i++) {
+            if (!((sortedIndexList.get(i + 1) - sortedIndexList.get(i)) == 1)) {
                 return false;
             }
         }

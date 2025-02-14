@@ -1,11 +1,10 @@
 package model;
+
 import static org.junit.Assert.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.util.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import org.junit.jupiter.api.BeforeEach;
 
 public class JokerJokerTest {
     List<Integer> cnm;
@@ -20,9 +19,9 @@ public class JokerJokerTest {
 
     @Test
     void testAbility() {
-        jk.Ability(cnm, cards);
+        jk.ability(cnm, cards);
         assertEquals((Integer) 9,cnm.get(1));
-        jk.Ability(cnm, cards);
+        jk.ability(cnm, cards);
         assertEquals((Integer) 13,cnm.get(1));
     }
 

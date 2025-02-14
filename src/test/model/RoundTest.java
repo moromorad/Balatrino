@@ -1,7 +1,6 @@
 package model;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.*;
 import org.junit.jupiter.api.BeforeEach;
@@ -32,12 +31,18 @@ public class RoundTest {
         score = 600;
         jokers = Arrays.asList(odd,even,joker);
         round = new Round(deck, jokers,score);
-        highHand = Arrays.asList(new Card("2", "S"), new Card("K", "D"), new Card("4", "H"), new Card("J", "C"), new Card("10", "S"));
-        pairHand = Arrays.asList(new Card("A", "S"), new Card("A", "D"), new Card("Q", "H"), new Card("J", "C"), new Card("10", "S"));
-        threeHand = Arrays.asList(new Card("A", "S"), new Card("A", "D"), new Card("A", "H"), new Card("J", "C"), new Card("10", "S"));
-        straightHand = Arrays.asList(new Card("10", "S"), new Card("9", "D"), new Card("8", "H"), new Card("7", "C"), new Card("6", "S"));
-        flushHand = Arrays.asList(new Card("4", "S"), new Card("6", "S"), new Card("Q", "S"), new Card("J", "S"), new Card("10", "S"));
-        straightFlushHand = Arrays.asList(new Card("A", "S"), new Card("K", "S"), new Card("Q", "S"), new Card("J", "S"), new Card("10", "S"));
+        highHand = Arrays.asList(new Card("2", "S"), new Card("K", "D"),
+            new Card("4", "H"), new Card("J", "C"), new Card("10", "S"));
+        pairHand = Arrays.asList(new Card("A", "S"), new Card("A", "D"),
+            new Card("Q", "H"), new Card("J", "C"), new Card("10", "S"));
+        threeHand = Arrays.asList(new Card("A", "S"), new Card("A", "D"),
+            new Card("A", "H"), new Card("J", "C"), new Card("10", "S"));
+        straightHand = Arrays.asList(new Card("10", "S"), new Card("9", "D"),
+            new Card("8", "H"), new Card("7", "C"), new Card("6", "S"));
+        flushHand = Arrays.asList(new Card("4", "S"), new Card("6", "S"),
+            new Card("Q", "S"), new Card("J", "S"), new Card("10", "S"));
+        straightFlushHand = Arrays.asList(new Card("A", "S"), new Card("K", "S"),
+            new Card("Q", "S"), new Card("J", "S"), new Card("10", "S"));
     }
     
 

@@ -2,7 +2,6 @@ package ui;
 
 import model.*;
 
-import static org.junit.Assert.assertEquals;
 
 import java.util.*;
 
@@ -76,20 +75,16 @@ public class Game {
     // MODIFIES : this
     // EFFECTS : performs a random upgrade
     public void upgrade() {
-        Random random = new Random();
-        int randInt = random.nextInt(6);
-        Joker odd = new OddJoker();
-        Joker even = new EvenJoker();
-        Joker joker = new JokerJoker();
+        int randInt = new Random().nextInt(6);
         switch (randInt) {
             case 0:
-                addJokerToDeck(odd);
+                addJokerToDeck(new OddJoker());
                 break;
             case 1:
-                addJokerToDeck(even);
+                addJokerToDeck(new EvenJoker());
                 break;
             case 2:
-                addJokerToDeck(joker);
+                addJokerToDeck(new JokerJoker());
                 break;
             case 3:
                 deck.addToDeck(randRank(), randSuit());
@@ -102,7 +97,6 @@ public class Game {
                 maxHands = maxHands + 1;
                 System.out.println("Increased hand size by 1!");
             default:
-                // shouldn't happen
         } 
     }
 

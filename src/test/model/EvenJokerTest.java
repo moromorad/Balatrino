@@ -9,7 +9,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class EvenJokerTest {
-       List<Integer> cnm;
+    List<Integer> cnm;
     Joker jk;
     List<Card> cards = Arrays.asList(new Card("2","H"),new Card("3","H"),new Card("4","S"),new Card("K","D"));
 
@@ -21,9 +21,9 @@ public class EvenJokerTest {
 
     @Test
     void testAbility() {
-        jk.Ability(cnm, cards);
-        assertEquals((Integer) 14 ,cnm.get(1));
-        jk.Ability(cnm, cards);
+        jk.ability(cnm, cards);
+        assertEquals((Integer) 14,cnm.get(1));
+        jk.ability(cnm, cards);
         assertEquals((Integer) 22,cnm.get(1));
     }
 

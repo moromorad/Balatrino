@@ -5,7 +5,9 @@ import java.util.List;
 public class OddJoker implements Joker {
     String desc;
     String name;
+    
     public OddJoker() {
+        
         desc = "Played cards with odd rank each give +31 Chips";
         name = "Odd Todd";
     }
@@ -13,7 +15,7 @@ public class OddJoker implements Joker {
     // EFFECT: each odd ranked card in the hand adds +31 Chips (A,3,5,7,9)
     // MODIFIES chipsAndMult
     @Override
-    public void Ability(List<Integer> chipsAndMult, List<Card> playedHand) {
+    public void ability(List<Integer> chipsAndMult, List<Card> playedHand) {
         int chips = 0;
         for (Card card : playedHand) {
             if (card.getRank().matches("\\d+")) {
@@ -30,7 +32,7 @@ public class OddJoker implements Joker {
 
     @Override
     public String getDesc() {
-       return desc;
+        return desc;
     }
 
     public String getName() {

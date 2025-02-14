@@ -2,10 +2,12 @@ package model;
 
 import java.util.List;
 
-public class EvenJoker implements Joker{
+public class EvenJoker implements Joker {
     String desc;
     String name;
+
     public EvenJoker() {
+
         desc = "Even ranked cards add +4 Mult";
         name = "Even Steven";
     }
@@ -13,7 +15,7 @@ public class EvenJoker implements Joker{
     @Override
     // EFFECT: each even ranked card in the hand adds +4 Mult (2,4,6,8,10)
     // MODIFIES chipsAndMult
-    public void Ability(List<Integer> chipsAndMult, List<Card> playedHand) {
+    public void ability(List<Integer> chipsAndMult, List<Card> playedHand) {
         int mult = 0;
         for (Card card : playedHand) {
             if (card.getRank().matches("\\d+")) {
