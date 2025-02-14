@@ -9,7 +9,7 @@ The game is played by playing cards that give you a score to defeat "Blinds" (a 
 You can also increase your score by having "Joker" cards which ewach have special abilities to enhance your score.
 Every round, the player has a limited amount of hands that can be played, with each hand having 5 cards.
 The game ends if the player cannot reach the total score of the blind after playing all their hands.
-After every other round, the player can choose a reward from 4 random rewards, such as removing/adding cards from the deck, adding jokers etc.
+After every round, the player is given a random upgrade such as adding/removing cards from the deck, increasing hand size and acquiring joker cards
 
 The aim of the game is to defeat as many Blinds as possible. 
 
