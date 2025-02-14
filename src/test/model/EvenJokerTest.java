@@ -31,4 +31,9 @@ public class EvenJokerTest {
     void testEvenJoker() {
         assertEquals("Even ranked cards add +4 Mult", jk.getDesc());
     }
+
+    @Test
+    void testGetName() {
+        assertEquals("Even Steven", jk.getName());
+    }
 }

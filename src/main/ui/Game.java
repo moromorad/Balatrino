@@ -6,6 +6,8 @@ import model.*;
 import java.util.*;
 
 
+// Represents the game itself, plays rounds until the player fails to reach the score, upgrades every round
+
 public class Game {
     Deck deck;
     List<Joker> jokers;

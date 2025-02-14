@@ -31,5 +31,9 @@ public class JokerJokerTest {
     }
 
 
+    @Test
+    void testGetName() {
+        assertEquals("Joker", jk.getName());
+    }
 
 }

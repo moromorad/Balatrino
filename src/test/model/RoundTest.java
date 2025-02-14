@@ -78,6 +78,20 @@ public class RoundTest {
 
         assertEquals((Integer) 5,round.getChipsAndMultFromPokerHand("High Card").get(0));
         assertEquals((Integer) 1,round.getChipsAndMultFromPokerHand("High Card").get(1));
+
+        assertEquals((Integer) 30,round.getChipsAndMultFromPokerHand("Straight").get(0));
+        assertEquals((Integer) 4,round.getChipsAndMultFromPokerHand("Straight").get(1));
+
+        assertEquals((Integer) 35,round.getChipsAndMultFromPokerHand("Flush").get(0));
+        assertEquals((Integer) 4,round.getChipsAndMultFromPokerHand("Flush").get(1));
+
+        assertEquals((Integer) 30,round.getChipsAndMultFromPokerHand("Three of a Kind").get(0));
+        assertEquals((Integer) 3,round.getChipsAndMultFromPokerHand("Three of a Kind").get(1));
+
+        assertEquals((Integer) 10,round.getChipsAndMultFromPokerHand("Pair").get(0));
+        assertEquals((Integer) 2,round.getChipsAndMultFromPokerHand("Pair").get(1));
+
+
     }
 
 

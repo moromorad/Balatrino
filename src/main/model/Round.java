@@ -4,13 +4,16 @@ import static org.junit.Assert.assertEquals;
 
 import java.util.*;
 
+// Represents a round of the game, it takes the deck, jokers, the score, and plays the round.
+
 public class Round {
     private Deck deck;
     private List<Joker> jokers;
     private int scoreLeft;
     private List<Card> currentHand;
-    // Represents a round of the game, it takes the deck, jokers, the score, and plays the round.
 
+    // MODIFIES : this
+    // EFFECTS : constructs the fields to play a round
     public Round(Deck deck, List<Joker> jokers, int score) {
         this.deck = deck;
         this.jokers = jokers;

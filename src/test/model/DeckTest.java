@@ -27,13 +27,13 @@ public class DeckTest {
     
 
     @Test
-    void getDeckTest() {
+    void testGetDeck() {
         assertEquals(deck.getCardNames(),deck2);
         
     }
 
     @Test
-    void addToDeckTest() {
+    void testAddToDeck() {
         deck.addToDeck("Q","S");
         assertEquals(5, deck.numberInDeck("Q"));
         assertEquals(14, deck.numberInDeck("S"));
@@ -45,14 +45,17 @@ public class DeckTest {
     }
 
     @Test
-    void removeFromDeckTest() {
+    void testRemoveFromDeck() {
         deck.removeFromDeck("Q", "S");
         assertEquals(3, deck.numberInDeck("Q"));
         assertEquals(12, deck.numberInDeck("S"));
+        deck.removeFromDeck("K", "H");
+        assertEquals(3, deck.numberInDeck("K"));
+        assertEquals(12, deck.numberInDeck("H"));
     }
 
     @Test
-    void numberInDeck() {
+    void testNumberInDeck() {
         assertEquals(4, deck.numberInDeck("Q"));
         assertEquals(4, deck.numberInDeck("K"));
         assertEquals(4, deck.numberInDeck("J"));
@@ -65,9 +68,25 @@ public class DeckTest {
         deck.removeFromDeck("K","S");
         assertEquals(3, deck.numberInDeck("K"));
         assertEquals(11, deck.numberInDeck("S"));
-
-
     }
 
+    @Test
+    void testGetSize() {
+        assertEquals(52,deck.getSize());
+    }
+
+    @Test
+    void testGetCards() {
+        assertEquals(52,deck.getCards().size());
+    }
+
+    @Test
+    void testSetDeck() {
+        deck.setDeck(new ArrayList<>());
+        assertEquals(0,deck.getCards().size());
+    }
 
 }
+
+
+

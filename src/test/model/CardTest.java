@@ -12,7 +12,7 @@ public class CardTest {
     Card card4;
     Card card5;
     Card card6;
-    
+
     @BeforeEach
     void runBefore() {
         card1 = new Card("K","D");
@@ -46,6 +46,8 @@ public class CardTest {
         assertEquals("King of Diamonds",card1.getFullName());
         assertEquals("10 of Diamonds",card6.getFullName());
         assertEquals("Jack of Spades",card3.getFullName());
+        assertEquals("Queen of Hearts",card2.getFullName());
+        assertEquals("Ace of Clubs",card4.getFullName());
     }
 
 }

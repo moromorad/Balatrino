@@ -32,5 +32,10 @@ public class OddJokerTest {
         assertEquals("Played cards with odd rank each give +31 Chips", jk.getDesc());
     }
 
+    @Test
+    void testGetName() {
+        assertEquals("Odd Todd", jk.getName());
+    }
+
 
 }

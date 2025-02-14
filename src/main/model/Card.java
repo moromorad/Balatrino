@@ -3,12 +3,13 @@ package model;
 // Represents a card in a standard deck of 52 cards with a rank, suit, and number of chips it provides
 
 public class Card {
-    // REQUIRES: rank to be a number 2-10 or K Q J A and suit to be one of S H C D
-    // MODIFIES : this
-    // EFFECTS : constructs a card with a rank and suit
+
     private String rank;
     private String suit;
 
+    // REQUIRES: rank to be a number 2-10 or K Q J A and suit to be one of S H C D
+    // MODIFIES : this
+    // EFFECTS : constructs a card with a rank and suit
     public Card(String rank, String suit) {
         this.rank = rank;
         this.suit = suit;
@@ -44,6 +45,7 @@ public class Card {
         return (getRank() + getSuit());
     }
 
+    // EFFECTS : returns the fuull name of the card
     public String getFullName() {
         String fullRank = "";
         String fullSuit = "";
