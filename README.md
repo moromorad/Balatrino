@@ -21,4 +21,5 @@ The actual game is really fun and I felt like it would be a nice and interesting
 - I want to be able to add/remove cards from my deck (using rewards)
 - I want to be able to add jokers (using rewards)
 - I want to view my score at the end of the game
-- I want to be able to
+- I want to be able to view the deck during the game
+
