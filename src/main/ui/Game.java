@@ -15,7 +15,7 @@ public class Game {
     float factor;
 
     // MODIFIES : this
-    // EFFECTS : initialises fiels for the game
+    // EFFECTS : initialises fields for the game
     public Game() {
         deck = new Deck();
         jokers = new ArrayList<Joker>();
