@@ -21,8 +21,11 @@ public class Deck {
             }
         }
     }
+
     //EFFECTS : returns the deck
-    public List<String> getDeck() {
+
+    public List<String> getCardNames() {
+
         List<String> cardNames = new ArrayList<String>();
         for (Card card : deck) {
             cardNames.add(card.getRank() + card.getSuit());
@@ -51,9 +54,11 @@ public class Deck {
     }
     // REQUIRES : str is a rank or suit (e.g. K for king D for diamonds)
     // EFFECTS : counts the number of the suit or rank in the deck
+
     public int numberInDeck(String str) {
+
         int count = 0;
-        if (str.equals("S")|str.equals("H")|str.equals("C")|str.equals("D")) {
+        if (str.equals("S") | str.equals("H") | str.equals("C") | str.equals("D")) {
             for (Card card : deck) {
                 if (card.getSuit().equals(str)) {
                     count = count + 1;
@@ -73,5 +78,11 @@ public class Deck {
         return deck.size();
     }
 
+    public List<Card> getCards() {
+        return deck;
+    }
 
+    public void setDeck(List<Card> cardList) {
+        deck = cardList;
+    }
 }

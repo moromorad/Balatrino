@@ -29,7 +29,7 @@ public class DeckTest {
 
     @Test
     void getDeckTest() {
-        assertEquals(deck.getDeck(),deck2);
+        assertEquals(deck.getCardNames(),deck2);
         
     }
 
