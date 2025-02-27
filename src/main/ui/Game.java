@@ -262,4 +262,8 @@ public class Game {
         }
     }
 
+    public List<Joker> getJokers() {
+        return jokers;
+    }
+
 }

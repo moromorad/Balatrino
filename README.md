@@ -23,3 +23,6 @@ The actual game is really fun and I felt like it would be a nice and interesting
 - I want to view my score at the end of the game
 - I want to be able to view the deck during the game
 
+- I want to be given the option to load from file at the start of the game. 
+- I want to be given the option to save at the end of each round.
+
