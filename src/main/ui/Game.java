@@ -273,26 +273,45 @@ public class Game {
         jokers = jokerList;
     }
 
-    public void setGameElements(String maxHands2, String roundsWon2, String base2, String factor2) {
-        maxHands = Integer.parseInt(maxHands2);
-        roundsWon = Integer.parseInt(roundsWon2);
-        base = Integer.parseInt(base2);
-        factor = Float.parseFloat(factor2);
+    public void setGameElements(int maxHands2, int roundsWon2, int base2, float factor2) {
+        maxHands = maxHands2;
+        roundsWon = roundsWon2;
+        base = base2;
+        factor = factor2;
     }
 
     // EFFECTS: returns game as JSON object
     public JSONObject toJson() {
-        return null;
+        JSONObject json = new JSONObject();
+        json.put("maxHands", maxHands);
+        json.put("roundsWon",roundsWon);
+        json.put("base",base);
+        json.put("factor",factor);
+        json.put("deck",deckToJson());
+        json.put("jokers",jokersToJson());
+        return json;
     }
 
     // EFFECTS: returns the deck as JSON array
     private JSONArray deckToJson() {
-        return null;
+        List<Card> cards = deck.getCards();
+        JSONArray jsonArray = new JSONArray();
+
+        for (Card card : cards) {
+            jsonArray.put(card.toJson());
+        }
+        return jsonArray;
     }
 
     // EFFECTS: returns jokers as JSON array
     private JSONArray jokersToJson() {
-        return null;
+        JSONArray jsonArray = new JSONArray();
+        for (Joker joker : jokers) {
+            JSONObject jsonObject = new JSONObject();
+            jsonObject.put("name",joker.getName());
+            jsonArray.put(jsonObject);
+        }
+        return jsonArray;
     }
 
     public Integer getRoundsWon() {

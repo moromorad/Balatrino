@@ -88,10 +88,10 @@ public class JsonReader {
     //MODIFIES: g
     //EFFECTS: parses the maxHands,roundsWon,base and factor  from JSON object and adds them to the game
     private void addGameElements(Game g, JSONObject jsonObj) {
-        String maxHands = jsonObj.getString("maxHands");
-        String roundsWon = jsonObj.getString("roundsWon");
-        String base = jsonObj.getString("base");
-        String factor = jsonObj.getString("factor");
+        int maxHands = jsonObj.getInt("maxHands");
+        int roundsWon = jsonObj.getInt("roundsWon");
+        int base = jsonObj.getInt("base");
+        float factor = jsonObj.getFloat("factor");
         g.setGameElements(maxHands,roundsWon,base,factor);
 
     }

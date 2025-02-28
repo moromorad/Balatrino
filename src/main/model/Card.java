@@ -1,5 +1,9 @@
 package model;
 
+import java.util.Collection;
+
+import org.json.JSONObject;
+
 // Represents a card in a standard deck of 52 cards with a rank, suit, and number of chips it provides
 
 public class Card {
@@ -72,6 +76,13 @@ public class Card {
         }
 
         return (fullRank + " of " + fullSuit);
+    }
+
+    //EFFECTS: returns the card as a json object
+    public JSONObject toJson() {
+        JSONObject json = new JSONObject();
+        json.put("name", getCard());
+        return json;
     }
 
 
