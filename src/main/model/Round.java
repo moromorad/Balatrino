@@ -125,7 +125,8 @@ public class Round {
         }
     }
 
-    // REQUIRES : chipsAndMult has 2 elements, both positive and second one is larger than 0 and hand is 5 elements
+    // REQUIRES : chipsAndMult has 2 elements, both positive and second one is larger than 0 and hand is 5 elements,
+    //            element 1 * element 2 <= scoreLeft
     // MODIFIES : this
     // EFFECTS : applies the given chips and mult to the score
     public void applyScore(List<Integer> chipsAndMult) {

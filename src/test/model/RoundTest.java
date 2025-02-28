@@ -118,6 +118,17 @@ public class RoundTest {
         cnm = Arrays.asList(50,5);
         round.applyScore(cnm);
         assertEquals((Integer) 290, round.getScoreLeft());
+        assertEquals(false,round.isWon());
+    }
+
+    @Test
+    void roundWonTest() {
+        List<Integer> cnm = new ArrayList<>();
+        cnm.add(600);
+        cnm.add(1);
+        round.applyScore(cnm);
+        assertEquals((Integer) 0, round.getScoreLeft());
+        assertEquals(true,round.isWon());
     }
 
     @Test
