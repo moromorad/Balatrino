@@ -314,6 +314,18 @@ public class Game {
         return jsonArray;
     }
 
+    //MODIFIES : this
+    //EFFECTS : asks to load the game from file and does it
+    private void askToLoad() {
+
+    }
+
+    //MODIFIES : game.json
+    //EFFECTS : asks to save the game and does it
+    private void askToSave() {
+
+    }
+
     public Integer getRoundsWon() {
         return roundsWon;
     }
