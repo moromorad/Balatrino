@@ -30,29 +30,6 @@ public class Game {
         factor = 1;
     }
 
-/*     // MODIFIES : this
-    // EFFECTS : plays the game
-    public void playBalatrino() {
-        while (playRound()) {
-            System.out.print("\033[H\033[2J");
-            System.out.flush();
-            System.out.println("Round Won!");
-            timeDelay(300);
-            System.out.println("Your upgrade is...");
-            timeDelay(1000);
-            upgrade();
-            timeDelay(5000);
-            roundsWon += 1;
-            factor += 0.5;
-            System.out.print("\033[H\033[2J");
-            System.out.flush();
-        }
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
-        System.out.println("You Lost :(");
-        System.out.println("Rounds Won : " + roundsWon);
-    } */
-
     // EFFECTS : plays a round/blind
     public boolean playRound() {
         Scanner scanner = new Scanner(System.in);
@@ -312,23 +289,6 @@ public class Game {
             jsonArray.put(jsonObject);
         }
         return jsonArray;
-    }
-
-    //MODIFIES : this
-    //EFFECTS : asks to load the game from file and does it
-    private void askToLoad() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Would you like to load from file? (Enter y/n)");
-        String choice = scanner.nextLine();
-        if (choice.equals("y")) {
-
-        }
-    }
-
-    //MODIFIES : game.json
-    //EFFECTS : asks to save the game and does it
-    private void askToSave() {
-        Scanner scanner = new Scanner(System.in);
     }
 
     public Integer getRoundsWon() {
