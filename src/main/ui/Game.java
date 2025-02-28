@@ -30,7 +30,7 @@ public class Game {
         factor = 1;
     }
 
-    // MODIFIES : this
+/*     // MODIFIES : this
     // EFFECTS : plays the game
     public void playBalatrino() {
         while (playRound()) {
@@ -51,7 +51,7 @@ public class Game {
         System.out.flush();
         System.out.println("You Lost :(");
         System.out.println("Rounds Won : " + roundsWon);
-    }
+    } */
 
     // EFFECTS : plays a round/blind
     public boolean playRound() {
@@ -257,7 +257,7 @@ public class Game {
     
 
     // EFFECTS : delays for "time" milliseconds
-    private void timeDelay(int time) {
+    public void timeDelay(int time) {
         try {
             Thread.sleep(time);  
         } catch (InterruptedException e) {
@@ -317,13 +317,18 @@ public class Game {
     //MODIFIES : this
     //EFFECTS : asks to load the game from file and does it
     private void askToLoad() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Would you like to load from file? (Enter y/n)");
+        String choice = scanner.nextLine();
+        if (choice.equals("y")) {
 
+        }
     }
 
     //MODIFIES : game.json
     //EFFECTS : asks to save the game and does it
     private void askToSave() {
-
+        Scanner scanner = new Scanner(System.in);
     }
 
     public Integer getRoundsWon() {
