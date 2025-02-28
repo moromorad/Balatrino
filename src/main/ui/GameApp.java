@@ -6,6 +6,8 @@ import java.util.Scanner;
 import persistence.JsonReader;
 import persistence.JsonWriter;
 
+
+// Represents the game itself, plays the game, has option to save and load
 public class GameApp {
     private Game game;
     private static final String JSON_STORE = "./data/game.json";
@@ -16,6 +18,8 @@ public class GameApp {
         game = new Game();
     }
 
+    // MODIFIES: game
+    // EFFECTS: plays the game
     public void playBalatrino() {
         askToLoad();
         while (game.playRound()) {

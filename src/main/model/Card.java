@@ -77,6 +77,9 @@ public class Card {
         return (fullRank + " of " + fullSuit);
     }
 
+    // toJson methods are based on the "JsonSerialitaionDemo" application and edited to fit my project
+    // GitHub : https://github.students.cs.ubc.ca/CPSC210/JsonSerializationDemo
+
     //EFFECTS: returns the card as a json object
     public JSONObject toJson() {
         JSONObject json = new JSONObject();

@@ -9,7 +9,7 @@ import org.json.JSONObject;
 import org.json.JSONArray;
 
 
-// Represents the game itself, plays rounds until the player fails to reach the score, upgrades every round
+// Represents the game itself, has methods that operate the game
 
 public class Game {
     Deck deck;
@@ -256,6 +256,9 @@ public class Game {
         base = base2;
         factor = factor2;
     }
+
+    // toJson methods are based on the "JsonSerialitaionDemo" application and edited to fit my project
+    // GitHub : https://github.students.cs.ubc.ca/CPSC210/JsonSerializationDemo
 
     // EFFECTS: returns game as JSON object
     public JSONObject toJson() {

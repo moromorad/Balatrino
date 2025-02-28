@@ -11,6 +11,10 @@ import org.junit.jupiter.api.Test;
 
 import ui.Game;
 
+
+// this class is based on the "JsonSerialitaionDemo" application and edited to fit my project
+// GitHub : https://github.students.cs.ubc.ca/CPSC210/JsonSerializationDemo
+
 public class JsonWriterTest {
     @Test
     void testWriterInvalidFile() {
@@ -25,10 +29,6 @@ public class JsonWriterTest {
     }
 
 
-    //maxHands = 4;
-    //roundsWon = 0;
-    //base = 275;
-    //factor = 1;
     @Test
     void testWriterBasicGame() {
         try {
