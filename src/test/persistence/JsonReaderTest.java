@@ -48,7 +48,7 @@ public class JsonReaderTest {
             assertEquals("Odd Todd", js.get(0).getName());
             assertEquals("Even Steven", js.get(1).getName());
             assertEquals("Joker", js.get(2).getName());
-        } catch (IOException e ) {
+        } catch (IOException e) {
             fail("Couldn't read from file");
         }
     }
