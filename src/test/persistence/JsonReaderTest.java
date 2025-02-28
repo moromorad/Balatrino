@@ -29,7 +29,7 @@ public class JsonReaderTest {
 
     @Test
     void testReaderEmptyGame() {
-        JsonReader reader = new JsonReader("./data/.json");
+        JsonReader reader = new JsonReader("./data/testJsonReaderEmpty.json");
         try {
             Game g = reader.read();
             assertEquals(0, g.getDeck().getSize());
@@ -40,7 +40,7 @@ public class JsonReaderTest {
     }
 
     @Test void testGeneralGame() {
-        JsonReader reader = new JsonReader("./data/.json");
+        JsonReader reader = new JsonReader("./data/testJsonReaderGeneral.json");
         try {
             Game g = reader.read();
             assertEquals(3,g.getDeck().getSize());

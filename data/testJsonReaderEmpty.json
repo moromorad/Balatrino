@@ -1,0 +1,8 @@
+{
+    "deck": [],
+    "jokers": [],
+    "roundsWon": "0",
+    "maxHands":"2",
+    "base":"20",
+    "factor":"3.1"
+}

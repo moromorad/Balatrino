@@ -266,4 +266,15 @@ public class Game {
         return jokers;
     }
 
+    public void setJokers(List<Joker> jokerList) {
+        jokers = jokerList;
+    }
+
+    public void setGameElements(String maxHands2, String roundsWon2, String base2, String factor2) {
+        maxHands = Integer.parseInt(maxHands2);
+        roundsWon = Integer.parseInt(roundsWon2);
+        base = Integer.parseInt(base2);
+        factor = Float.parseFloat(factor2);
+    }
+
 }

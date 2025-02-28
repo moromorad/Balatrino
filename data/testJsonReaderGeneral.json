@@ -1,0 +1,35 @@
+{
+    "deck": [
+        {
+            "name": "KD"
+        },
+
+        {
+            "name": "QH"
+        },
+        
+        {
+            "name": "10S"
+        }
+    ],
+
+    "jokers": [
+        {
+            "name": "odd"
+        },
+
+        {
+            "name": "even"
+        },
+
+        {
+            "name": "joker"
+        }
+    ],
+
+    "roundsWon": "2",
+    "maxHands":"5",
+    "base":"425",
+    "factor":"2.3"
+
+}

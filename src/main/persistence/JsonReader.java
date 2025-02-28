@@ -7,6 +7,8 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.Stream;
 
 import org.json.*;
@@ -43,27 +45,55 @@ public class JsonReader {
     }
 
     // EFFECTS: parses game from JSON object and returns it
-    private Game parseGame(JSONObject jsonObject) {
-        return null;
-
+    private Game parseGame(JSONObject jsonObj) {
+        Game g = new Game();
+        addDeck(g,jsonObj);
+        addJokers(g,jsonObj);
+        addGameElements(g,jsonObj);
+        return g;
     }
 
     //MODIFIES: g
     //EFFECTS: parses the deck from JSON object and adds them to the game
     private void addDeck(Game g, JSONObject jsonObj) {
-
+        JSONArray jsonArray = jsonObj.getJSONArray("deck");
+        List<Card> cardList = new ArrayList<Card>();
+        for (Object json : jsonArray) { 
+            JSONObject nextCard = (JSONObject) json;
+            String name = nextCard.getString("name");
+            cardList.add(new Card(name.substring(0,1),name.substring(1,2)));
+        }
+        g.getDeck().setDeck(cardList);
     }
 
     //MODIFIES: g
     //EFFECTS: parses the jokers from JSON object and adds them to the game
     private void addJokers(Game g, JSONObject jsonObj) {
-        
+        JSONArray jsonArray = jsonObj.getJSONArray("jokers");
+        List<Joker> jokerList = new ArrayList<Joker>();
+        for (Object json : jsonArray) { 
+            JSONObject nextJoker = (JSONObject) json;
+            String name = nextJoker.getString("name");
+            if (name.equals("odd")) {
+                jokerList.add(new OddJoker());
+            } else if (name.equals("even")) {
+                jokerList.add(new EvenJoker());
+            } else {
+                jokerList.add(new JokerJoker());
+            }
+        }
+        g.setJokers(jokerList);
     }
 
     //MODIFIES: g
     //EFFECTS: parses the maxHands,roundsWon,base and factor  from JSON object and adds them to the game
     private void addGameElements(Game g, JSONObject jsonObj) {
-        
+        String maxHands = jsonObj.getString("maxHands");
+        String roundsWon = jsonObj.getString("roundsWon");
+        String base = jsonObj.getString("base");
+        String factor = jsonObj.getString("factor");
+        g.setGameElements(maxHands,roundsWon,base,factor);
+
     }
     
 }
