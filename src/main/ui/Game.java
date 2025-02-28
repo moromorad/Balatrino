@@ -5,6 +5,9 @@ import model.*;
 
 import java.util.*;
 
+import org.json.JSONObject;
+import org.json.JSONArray;
+
 
 // Represents the game itself, plays rounds until the player fails to reach the score, upgrades every round
 
@@ -275,6 +278,21 @@ public class Game {
         roundsWon = Integer.parseInt(roundsWon2);
         base = Integer.parseInt(base2);
         factor = Float.parseFloat(factor2);
+    }
+
+    // EFFECTS: returns game as JSON object
+    public JSONObject toJson() {
+        return null;
+    }
+
+    // EFFECTS: returns the deck as JSON array
+    private JSONArray deckToJson() {
+        return null;
+    }
+
+    // EFFECTS: returns jokers as JSON array
+    private JSONArray jokersToJson() {
+        return null;
     }
 
 }
