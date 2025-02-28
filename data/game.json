@@ -3,14 +3,14 @@
         {"name": "Joker"},
         {"name": "Joker"}
     ],
-    "roundsWon": 3,
+    "roundsWon": 4,
     "maxHands": 4,
     "deck": [
         {"name": "AS"},
         {"name": "KS"},
         {"name": "QS"},
         {"name": "JS"},
-        {"name": "10S"},
+        {"name": "10"},
         {"name": "9S"},
         {"name": "8S"},
         {"name": "7S"},
@@ -23,7 +23,7 @@
         {"name": "KH"},
         {"name": "QH"},
         {"name": "JH"},
-        {"name": "10H"},
+        {"name": "10"},
         {"name": "9H"},
         {"name": "8H"},
         {"name": "7H"},
@@ -36,7 +36,7 @@
         {"name": "KC"},
         {"name": "QC"},
         {"name": "JC"},
-        {"name": "10C"},
+        {"name": "10"},
         {"name": "9C"},
         {"name": "8C"},
         {"name": "7C"},
@@ -49,7 +49,7 @@
         {"name": "KD"},
         {"name": "QD"},
         {"name": "JD"},
-        {"name": "10D"},
+        {"name": "10"},
         {"name": "9D"},
         {"name": "8D"},
         {"name": "7D"},
@@ -58,8 +58,9 @@
         {"name": "4D"},
         {"name": "3D"},
         {"name": "2D"},
-        {"name": "6D"}
+        {"name": "6D"},
+        {"name": "JS"}
     ],
-    "factor": 2.5,
+    "factor": 3,
     "base": 275
 }
