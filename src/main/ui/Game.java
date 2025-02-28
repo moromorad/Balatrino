@@ -295,4 +295,20 @@ public class Game {
         return null;
     }
 
+    public Integer getRoundsWon() {
+        return roundsWon;
+    }
+
+    public Integer getMaxHands() {
+        return maxHands;
+    }
+
+    public Integer getBase() {
+        return base;
+    }
+
+    public Float getFactor() {
+        return factor;
+    }
+
 }
