@@ -21,6 +21,8 @@ public class GameApp {
     // MODIFIES: game
     // EFFECTS: plays the game
     public void playBalatrino() {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
         askToLoad();
         while (game.playRound()) {
             System.out.print("\033[H\033[2J");
@@ -47,7 +49,7 @@ public class GameApp {
     //EFFECTS : asks to load the game from file and does it
     private void askToLoad() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("would you like to load from file? (Enter y/n)");
+        System.out.println("Would you like to load from file? (Enter y/n)");
         String input = scanner.nextLine();
         if (input.equals("y")) {
             try {
