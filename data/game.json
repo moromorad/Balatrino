@@ -1,7 +1,10 @@
 {
-    "jokers": [],
-    "roundsWon": 1,
-    "maxHands": 5,
+    "jokers": [
+        {"name": "Joker"},
+        {"name": "Joker"}
+    ],
+    "roundsWon": 3,
+    "maxHands": 4,
     "deck": [
         {"name": "AS"},
         {"name": "KS"},
@@ -54,8 +57,9 @@
         {"name": "5D"},
         {"name": "4D"},
         {"name": "3D"},
-        {"name": "2D"}
+        {"name": "2D"},
+        {"name": "6D"}
     ],
-    "factor": 1.5,
+    "factor": 2.5,
     "base": 275
 }

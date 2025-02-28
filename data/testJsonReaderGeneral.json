@@ -7,7 +7,7 @@
         {
             "name": "QH"
         },
-        
+
         {
             "name": "10S"
         }
@@ -15,15 +15,15 @@
 
     "jokers": [
         {
-            "name": "odd"
+            "name": "Odd Todd"
         },
 
         {
-            "name": "even"
+            "name": "Even Steven"
         },
 
         {
-            "name": "joker"
+            "name": "Joker"
         }
     ],
 

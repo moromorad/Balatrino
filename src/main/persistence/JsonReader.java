@@ -74,9 +74,9 @@ public class JsonReader {
         for (Object json : jsonArray) { 
             JSONObject nextJoker = (JSONObject) json;
             String name = nextJoker.getString("name");
-            if (name.equals("odd")) {
+            if (name.equals("Odd Todd")) {
                 jokerList.add(new OddJoker());
-            } else if (name.equals("even")) {
+            } else if (name.equals("Even Steven")) {
                 jokerList.add(new EvenJoker());
             } else {
                 jokerList.add(new JokerJoker());
