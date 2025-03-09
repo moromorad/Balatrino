@@ -105,29 +105,13 @@ public class Game {
     }
 
     // MODIFIES : this
-    // EFFECTS : prompts the user to remove a card from the deck
+    // EFFECTS : removes a random card from the deck
     private void upgradeRemove() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Remove a card from the deck!");
-        System.out.println("Enter the card you want to remove as 2 characters (e.g. king of diamonds is KD)");
-        String chosenString;
-        Card card = new Card("K","D");
-        boolean removed = false;
-        while (!removed) {
-            chosenString = scanner.nextLine();
-            card = new Card(chosenString.substring(0,1), chosenString.substring(1,2));
-            for (Card c : deck.getCards()) {
-                if (c.getCard().equals(chosenString)) {
-                    deck.getCards().remove(c);
-                    removed = true;
-                    break;
-                }
-            }
-            if (!removed) {
-                System.out.println("Couldn't find card, try again");
-            }
-            System.out.println("Successfully removed " + card.getFullName());
-        }
+        Random random = new Random();
+        System.out.println("Removing a card from the deck!");
+        int index = random.nextInt(deck.getSize());
+        Card card = deck.getCards().remove(index);
+        System.out.println("Successfully removed " + card.getFullName());
     }
 
 
