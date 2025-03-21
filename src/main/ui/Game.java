@@ -119,7 +119,7 @@ public class Game {
 
 
     // EFFECTS : generates a random rank
-    private String randRank() {
+    public String randRank() {
         List<String> ranks = Arrays.asList("A", "K", "Q", "J", "10", "9", "8", "7", "6", "5", "4", "3", "2");
         Random random = new Random();
         int rand = random.nextInt(ranks.size());
@@ -127,7 +127,7 @@ public class Game {
     }
 
     // EFFECTS : generates a random suit
-    private String randSuit() {
+    public String randSuit() {
         List<String> suits = Arrays.asList("S","H","C","D");
         Random random = new Random();
         int rand = random.nextInt(suits.size());
@@ -136,7 +136,7 @@ public class Game {
 
 
     // EFFECTS : extracts the names of the jokers in the game
-    private void extractJokerNames(List<String> jokerNames) {
+    public void extractJokerNames(List<String> jokerNames) {
         for (Joker joker : jokers) {
             jokerNames.add(joker.getName());
         }
@@ -144,7 +144,7 @@ public class Game {
 
 
     // EFFECTS : initialises the deck for the round
-    private Deck initializeRoundDeck() {
+    public Deck initializeRoundDeck() {
         Deck roundDeck = new Deck();
         roundDeck.setDeck(new ArrayList<Card>(deck.getCards())); 
         return roundDeck;
@@ -152,7 +152,7 @@ public class Game {
 
     // MODIFIES : round
     // EFFECTS : performs all the printing and calculations that go into scoring
-    private int scoringProtocol(Round round, List<Card> playedHand) {
+    public int scoringProtocol(Round round, List<Card> playedHand) {
         List<String> playedHandNames = new ArrayList<String>();
         for (Card card : playedHand) {
             playedHandNames.add(card.getCard());
