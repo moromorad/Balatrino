@@ -2,11 +2,7 @@ package ui;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        //GameApp game = new GameApp();
-        //game.playBalatrino();
-        GameUI Game = new GameUI();
-        Game.playRound();
-
-
+        // play the game
+        GameUI game = new GameUI();
     }
 }

@@ -13,9 +13,11 @@
         {"name": "Odd Todd"},
         {"name": "Even Steven"},
         {"name": "Joker"},
-        {"name": "Joker"}
+        {"name": "Joker"},
+        {"name": "Joker"},
+        {"name": "Even Steven"}
     ],
-    "roundsWon": 27,
+    "roundsWon": 32,
     "maxHands": 7,
     "deck": [
         {"name": "AS"},
@@ -36,14 +38,12 @@
         {"name": "9H"},
         {"name": "8H"},
         {"name": "7H"},
-        {"name": "6H"},
         {"name": "5H"},
         {"name": "4H"},
         {"name": "3H"},
         {"name": "2H"},
         {"name": "AC"},
         {"name": "KC"},
-        {"name": "QC"},
         {"name": "JC"},
         {"name": "10"},
         {"name": "9C"},
@@ -54,7 +54,6 @@
         {"name": "4C"},
         {"name": "3C"},
         {"name": "2C"},
-        {"name": "AD"},
         {"name": "KD"},
         {"name": "QD"},
         {"name": "JD"},
@@ -75,6 +74,6 @@
         {"name": "3H"},
         {"name": "8C"}
     ],
-    "factor": 14.5,
+    "factor": 17.25,
     "base": 275
 }

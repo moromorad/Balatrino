@@ -26,7 +26,7 @@ public class Game {
         jokers = new ArrayList<Joker>();
         maxHands = 4;
         roundsWon = 0;
-        base = 275;
+        base = 200;
         factor = 1;
     }
 
