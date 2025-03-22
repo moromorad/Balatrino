@@ -220,7 +220,7 @@ public class GameUI extends JFrame {
     // MODIFIES : this
     // EFFECTS : performs a random upgrade
     public void upgrade() {
-        int randInt = new Random().nextInt(6);
+        int randInt = new Random().nextInt(6); 
         switch (randInt) {
             case 0:
                 addJokerToDeck(new OddJoker());
@@ -262,8 +262,16 @@ public class GameUI extends JFrame {
         game.timeDelay(700);
         String cardString = JOptionPane.showInputDialog(GameUI.this, 
                 "Enter the card you want removed (e.g KD for king of diamonds)");
-        String rank = cardString.substring(0,1);
-        String suit = cardString.substring(1,2);
+        String rank;
+        String suit;
+        if (cardString.contains("10")) {
+            rank = cardString.substring(0,2);
+            suit = cardString.substring(2,3);
+        } else {
+            rank = cardString.substring(0,1);
+            suit = cardString.substring(1,2);
+        }
+        
         Card card = new Card(rank,suit);
         game.deck.getCards().remove(card);
         outputLabel.setText("Successfully removed " + card.getFullName());

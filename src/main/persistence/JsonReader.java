@@ -61,7 +61,11 @@ public class JsonReader {
         for (Object json : jsonArray) { 
             JSONObject nextCard = (JSONObject) json;
             String name = nextCard.getString("name");
-            cardList.add(new Card(name.substring(0,1),name.substring(1,2)));
+            if (name.contains("10")) {
+                cardList.add(new Card(name.substring(0,2),name.substring(2,3)));
+            } else {
+                cardList.add(new Card(name.substring(0,1),name.substring(1,2)));
+            }
         }
         g.getDeck().setDeck(cardList);
     }
