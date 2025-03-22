@@ -256,14 +256,18 @@ public class GameUI extends JFrame {
 
 
     // MODIFIES : game
-    // EFFECTS : removes a random card from the deck
+    // EFFECTS : asks the user what card they want removed
     public void upgradeRemove() {
-        Random random = new Random();
         outputLabel.setText("Removing a card from the deck!");
         game.timeDelay(700);
-        int index = random.nextInt(game.deck.getSize());
-        Card card = game.deck.getCards().remove(index);
+        String cardString = JOptionPane.showInputDialog(GameUI.this, 
+                "Enter the card you want removed (e.g KD for king of diamonds)");
+        String rank = cardString.substring(0,1);
+        String suit = cardString.substring(1,2);
+        Card card = new Card(rank,suit);
+        game.deck.getCards().remove(card);
         outputLabel.setText("Successfully removed " + card.getFullName());
+        game.timeDelay(500);
     }
 
 
