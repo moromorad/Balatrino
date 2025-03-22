@@ -34,6 +34,6 @@ The actual game is really fun and I felt like it would be a nice and interesting
 - then you are prompted to enter the hand to play. you have to enter 5 numbers indicating your card choices from the current hand on-screen, each separated by commas
 - the goal is to choose 5 cards that have the best poker hand from (Pair, Three of a Kind, Full House, Straight, Flush, Straigh Flush). each has an associated "Chips" and "Mult" represented as [Chips, Mult]
 - the score your hand gets is calculated by multiplying these 2 numbers together after all cards and jokers are applied.
-- after each round won, a random upgrade is applied from (add joker, add card, remove card, increase max hands by 1)
-- different joker alter your hands chips and mult based on the cards you played.
+- after each round won, a random upgrade is applied from (add joker, add card, remove card, increase max hands by 1) (adding multiple Xs to Y) (removing Xs from Y) 
+- different jokers alter your hands chips and mult based on the cards you played.
 - at the start of the game you are asked if you want to load, and after every round won, you are asked if you want to save your progress.
