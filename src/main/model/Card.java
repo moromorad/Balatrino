@@ -87,6 +87,7 @@ public class Card {
         return json;
     }
 
+
     @Override
     public int hashCode() {
         final int prime = 31;
