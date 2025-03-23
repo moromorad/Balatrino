@@ -109,21 +109,16 @@ public class Card {
             return false;
         }
         Card other = (Card) obj;
-        if (rank == null) {
-            if (other.rank != null) {
-                return false;
-            }
-        } else if (!rank.equals(other.rank)) {
-            return false;
+        return (fieldEquals(other.rank, rank) && fieldEquals(other.suit, suit));
+    }
+
+    // EFFECTS : checks if 2 objects are equal (with null checking)
+    private boolean fieldEquals(Object a, Object b) {
+        if (a == null) {
+            return (b == null);
+        } else {
+            return (a.equals(b));
         }
-        if (suit == null) {
-            if (other.suit != null) {
-                return false;
-            }
-        } else if (!suit.equals(other.suit)) {
-            return false;
-        }
-        return true;
     }
 
 

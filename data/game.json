@@ -33,7 +33,6 @@
         {"name": "KC"},
         {"name": "QC"},
         {"name": "JC"},
-        {"name": "10C"},
         {"name": "9C"},
         {"name": "8C"},
         {"name": "7C"},
@@ -53,8 +52,9 @@
         {"name": "6D"},
         {"name": "5D"},
         {"name": "4D"},
+        {"name": "3D"},
         {"name": "2D"}
     ],
     "factor": 1.75,
-    "base": 4000
+    "base": 200
 }

@@ -37,3 +37,9 @@ The actual game is really fun and I felt like it would be a nice and interesting
 - after each round won, a random upgrade is applied from (add joker, add card, remove card, increase max hands by 1) (adding multiple Xs to Y) (removing Xs from Y) 
 - different jokers alter your hands chips and mult based on the cards you played.
 - at the start of the game you are asked if you want to load, and after every round won, you are asked if you want to save your progress.
+
+- You can generate the first required action related to the user story "adding multiple Xs to a Y" by getting the "add card" upgrade
+- You can generate the second required action related to the user story "removing Xs for Y" by getting the "remove card" upgrade or playing a hand in the round
+- You can locate my visual component by running the application (the main menu)
+- You can save the state of my application by clicking yes when asked to save after winning a round
+- You can reload the state of my application by clicking yes when asked to load from file when first starting the game
