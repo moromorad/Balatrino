@@ -43,3 +43,10 @@ The actual game is really fun and I felt like it would be a nice and interesting
 - You can locate my visual component by running the application (the main menu)
 - You can save the state of my application by clicking yes when asked to save after winning a round
 - You can reload the state of my application by clicking yes when asked to load from file when first starting the game
+
+# Phase 4: Task 2
+- Added (card) to the deck 
+- Removed (card) from the deck
+- Pulled (amount) cards from the deck
+- Pulled 5 cards from the current hand
+- (joker) Ability used

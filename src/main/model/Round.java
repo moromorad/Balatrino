@@ -77,7 +77,7 @@ public class Round {
 
         assertEquals(3,currentHand.size());
         assertEquals(5,pulledCards.size());
-        EventLog.getInstance().logEvent(new Event("Pulled 5 card from the current hand"));
+        EventLog.getInstance().logEvent(new Event("Pulled 5 cards from the current hand"));
         return pulledCards;
     }
 
