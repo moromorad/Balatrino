@@ -26,6 +26,7 @@ public class EvenJoker implements Joker {
             }
         }
         chipsAndMult.set(1, chipsAndMult.get(1) + mult);
+        EventLog.getInstance().logEvent(new Event("Even Joker Ability used"));
        
     }
 

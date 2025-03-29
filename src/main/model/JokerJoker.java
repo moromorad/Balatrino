@@ -19,6 +19,7 @@ public class JokerJoker implements Joker {
     // MODIFIES chipsAndMult
     public void ability(List<Integer> chipsAndMult, List<Card> playedHand) {
         chipsAndMult.set(1,chipsAndMult.get(1) + 4);
+        EventLog.getInstance().logEvent(new Event("Joker Ability used"));
     }
 
     @Override

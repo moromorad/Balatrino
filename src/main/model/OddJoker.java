@@ -28,6 +28,7 @@ public class OddJoker implements Joker {
             }
         }
         chipsAndMult.set(0, chipsAndMult.get(0) + chips);
+        EventLog.getInstance().logEvent(new Event("Odd Joker Ability used"));
        
     }
 

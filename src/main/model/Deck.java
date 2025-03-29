@@ -35,8 +35,9 @@ public class Deck {
     //MODIFIES : this
     // EFFECTS : adds the card to the deck
     public void addToDeck(String rank, String suit) {
-        deck.add(new Card(rank, suit));
-        EventLog.getInstance().logEvent(new Event("Added a card to the deck"));
+        Card card = new Card(rank, suit);
+        deck.add(card);
+        EventLog.getInstance().logEvent(new Event("Added " + card.getFullName() + " to the deck"));
     }
 
     //MODIFIES : this
@@ -44,7 +45,7 @@ public class Deck {
     public void removeFromDeck(String rank, String suit) {
         Card card = new Card(rank, suit);
         deck.remove(card);
-        EventLog.getInstance().logEvent(new Event("Removed a card from the deck"));
+        EventLog.getInstance().logEvent(new Event("Removed " + card.getFullName() + " from the deck"));
 
     }
     // REQUIRES : str is a rank or suit (e.g. K for king D for diamonds)
@@ -85,5 +86,6 @@ public class Deck {
     // EFFECTS : removes the card from the deck
     public void removeCard(Card card) {
         deck.remove(card);
+        EventLog.getInstance().logEvent(new Event("Removed " + card.getFullName() + " from the deck"));
     }
 }

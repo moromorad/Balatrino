@@ -41,7 +41,8 @@ public class GameUI extends JFrame {
     public GameUI() {
         super("Balatrino");
         game = new Game();
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
+        addWindowListener(new GameListener());
         setPreferredSize(new Dimension(800, 800));
         ((JPanel) getContentPane()).setBorder(new EmptyBorder(13, 13, 13, 13));
         setLayout(new BorderLayout());
@@ -321,7 +322,8 @@ public class GameUI extends JFrame {
     // EFFECTS : displays the game over screen
     public void gameOver() {
         JFrame frame = new JFrame("Game Over");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        frame.addWindowListener(new GameListener());
         frame.setSize(800, 800);
 
         JPanel panel = new JPanel();
@@ -349,7 +351,8 @@ public class GameUI extends JFrame {
     // EFFECTS : displays the main menu
     public void mainMenu() {
         JFrame menuFrame = new JFrame("Game");
-        menuFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        menuFrame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        menuFrame.addWindowListener(new GameListener());
         menuFrame.setSize(800, 800);
 
         JPanel menuPanel = new JPanel();
