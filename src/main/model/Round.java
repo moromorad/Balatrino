@@ -52,6 +52,7 @@ public class Round {
             deck.getCards().remove(deck.getCards().get(nextIndex));
         }
         currentHand.addAll(randomList);
+        EventLog.getInstance().logEvent(new Event("Pulled " + amount + " cards from the deck"));
     }
 
     // REQUIRES:cardString to be a string of 5 numbers in the range of 1-8 inclusive, no repeats,seprated by commas only
@@ -76,6 +77,7 @@ public class Round {
 
         assertEquals(3,currentHand.size());
         assertEquals(5,pulledCards.size());
+        EventLog.getInstance().logEvent(new Event("Pulled 5 card from the current hand"));
         return pulledCards;
     }
 

@@ -1,6 +1,7 @@
 package model;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import java.util.*;
 
@@ -84,6 +85,13 @@ public class DeckTest {
     void testSetDeck() {
         deck.setDeck(new ArrayList<>());
         assertEquals(0,deck.getCards().size());
+    }
+
+    @Test
+    void testremoveCard() {
+        Card card = new Card("K", "D");
+        deck.removeCard(card);
+        assertTrue(!deck.getCards().contains(card));
     }
 
 }

@@ -273,7 +273,7 @@ public class GameUI extends JFrame {
         }
         
         Card card = new Card(rank,suit);
-        game.deck.getCards().remove(card);
+        game.deck.removeCard(card);
         outputLabel.setText("Successfully removed " + card.getFullName());
         game.timeDelay(500);
     }

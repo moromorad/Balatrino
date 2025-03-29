@@ -45,7 +45,7 @@ public class JsonWriterTest {
             assertEquals(0, g.getJokers().size());
             assertEquals(0,g.getRoundsWon());
             assertEquals(4,g.getMaxHands());
-            assertEquals(275,g.getBase());
+            assertEquals(200,g.getBase());
             assertEquals(1,g.getFactor());
         } catch (IOException e) {
             fail("Exception should not have been thrown");
@@ -71,7 +71,7 @@ public class JsonWriterTest {
             assertEquals(2, g.getJokers().size());
             assertEquals(0,g.getRoundsWon());
             assertEquals(4,g.getMaxHands());
-            assertEquals(275,g.getBase());
+            assertEquals(200,g.getBase());
             assertEquals(1,g.getFactor());
         } catch (IOException e) {
             fail("Exception should not have been thrown");
