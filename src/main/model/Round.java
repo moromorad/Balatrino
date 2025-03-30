@@ -56,7 +56,7 @@ public class Round {
     }
 
     // REQUIRES:cardString to be a string of 5 numbers in the range of 1-8 inclusive, no repeats,seprated by commas only
-    // MODIFIES : this
+    // MODIFIES : this, EventLog
     // EFFECTS : pulls the 5 cards from the current hand, returns the list of those cards and removes them 
     public List<Card> pullFromHand(String cardString) {
         List<Card> pulledCards = new ArrayList<>();
