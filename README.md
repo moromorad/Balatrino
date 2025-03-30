@@ -45,11 +45,53 @@ The actual game is really fun and I felt like it would be a nice and interesting
 - You can reload the state of my application by clicking yes when asked to load from file when first starting the game
 
 # Phase 4: Task 2
-- Added (card) to the deck 
-- Removed (card) from the deck
-- Pulled (amount) cards from the deck
-- Pulled 5 cards from the current hand
-- (joker) Ability used
+Sun Mar 30 15:56:19 PDT 2025
+Pulled 8 cards from the deck
+
+Sun Mar 30 15:58:53 PDT 2025
+Pulled 5 cards from the current hand
+
+Sun Mar 30 15:59:15 PDT 2025
+Pulled 8 cards from the deck
+
+Sun Mar 30 15:59:26 PDT 2025
+Pulled 5 cards from the current hand
+
+Sun Mar 30 15:59:32 PDT 2025
+Odd Joker Ability used
+
+Sun Mar 30 15:59:47 PDT 2025
+Pulled 8 cards from the deck
+
+Sun Mar 30 15:59:56 PDT 2025
+Pulled 5 cards from the current hand
+
+Sun Mar 30 16:00:02 PDT 2025
+Odd Joker Ability used
+
+Sun Mar 30 16:00:02 PDT 2025
+Even Joker Ability used
+
+Sun Mar 30 16:00:17 PDT 2025
+Pulled 8 cards from the deck
+
+Sun Mar 30 16:00:31 PDT 2025
+Pulled 5 cards from the current hand
+
+Sun Mar 30 16:00:37 PDT 2025
+Odd Joker Ability used
+
+Sun Mar 30 16:00:37 PDT 2025
+Even Joker Ability used
+
+Sun Mar 30 16:00:37 PDT 2025
+Joker Ability used
+
+Sun Mar 30 16:00:44 PDT 2025
+Added 5 of Diamonds to the deck
+
+Sun Mar 30 16:00:51 PDT 2025
+Pulled 8 cards from the deck
 
 # Phase 4: Task 3
 
