@@ -82,7 +82,7 @@ public class Deck {
         deck = cardList;
     }
 
-    // MODIFIES : this
+    // MODIFIES : this, EventLog
     // EFFECTS : removes the card from the deck
     public void removeCard(Card card) {
         deck.remove(card);

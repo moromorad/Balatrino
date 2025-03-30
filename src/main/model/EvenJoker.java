@@ -15,7 +15,7 @@ public class EvenJoker implements Joker {
 
     @Override
     // EFFECT: each even ranked card in the hand adds +4 Mult (2,4,6,8,10)
-    // MODIFIES chipsAndMult
+    // MODIFIES chipsAndMult, EventLog
     public void ability(List<Integer> chipsAndMult, List<Card> playedHand) {
         int mult = 0;
         for (Card card : playedHand) {

@@ -40,7 +40,7 @@ public class Round {
     }
 
     // REQUIRES : amount is either 5 or 8
-    // MODIFIES : this
+    // MODIFIES : this, EventLog
     // EFFECTS : pulls, amount of cards from the deck and adds them to the current hand
     public void pullFromDeck(int amount) {
         List<Card> randomList = new ArrayList<>();
