@@ -92,10 +92,3 @@ Added 5 of Diamonds to the deck
 
 Sun Mar 30 16:00:51 PDT 2025
 Pulled 8 cards from the deck
-
-# Phase 4: Task 3
-
-I would've made GameUI extend Game, since there are a lot of duplicated methods with different implementations, and GameUI calls some of Game's methods. so i would have GameUI extend it, then override each method that i needed to. this would make the heirarchy and associations of my classes more understandable than the one I have now.
-
-I also would've replaced the Joker interface and subclasses with a singular Joker class with some kind of "metric" class that is passed in as a parameter when calling the Joker constructor (like the one that was in Practical Midterm 1) that performs a certain operation on the chips and mult given. I think this would've been a better solution, that would reduce a lot of duplicated code, increased cohesion and removed the need of making an entire new class just to make a new type of joker.
-
